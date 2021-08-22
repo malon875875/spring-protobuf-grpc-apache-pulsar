@@ -39,6 +39,5 @@ Use the script on pulsar-docker.sh to start pulsar instance.
   * docker run -it   -p 6650:6650   -p 8080:8080   apachepulsar/pulsar:2.2.0   bin/pulsar standalone
 
 ## Notes
-* use Interface ConsumerBuilder<T>.[messageListener](https://pulsar.incubator.apache.org/api/client/2.8.0-SNAPSHOT/index.html?org/apache/pulsar/client/api/ConsumerBuilder.html) -- When a MessageListener is set, application will receive messages through it. Calls to Consumer.receive() will not be allowed.
+* Register the Message Listener ConsumerBuilder<T>.[messageListener](https://pulsar.incubator.apache.org/api/client/2.8.0-SNAPSHOT/index.html?org/apache/pulsar/client/api/ConsumerBuilder.html) using @PostConstruct  
 * Make sure though to use in @PostConstruct
-  * https://pulsar.incubator.apache.org/api/client/2.8.0-SNAPSHOT/index.html?org/apache/pulsar/client/api/MessageListener.html
